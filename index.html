@@ -3,9 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mint Digital Marketing | Global Digital Strategy & Development Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00ffa3;
+            --primary-dark: #00d1ff;
+            --bg-dark: #080808;
+            --card-bg: #121212;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+            h2 { font-size: 2rem !important; }
+            .section-padding { padding-top: 4rem; padding-bottom: 4rem; }
+        }
+
+        .section-padding { padding-top: 6rem; padding-bottom: 6rem; }
+
+        /* Premium Buttons */
+        .btn-modern {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            border: 1px solid transparent;
+            cursor: pointer;
+            text-decoration: none !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            box-shadow: 0 4px 15px rgba(0, 255, 163, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 255, 163, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.03);
+            color: #fff;
+            border-color: var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Portfolio Cards */
+        .portfolio-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .portfolio-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Animations */
+        .accent-text {
+            color: var(--primary);
+        }
+
+        .mesh-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 163, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+        /* Logo Styling */
+        .site-logo {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        .footer-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663339982393/JxOloJlwJIMvtdXl.png" alt="Mint Digital Marketing Logo" class="site-logo">
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#services" class="text-gray-400 hover:text-[#00ffa3] transition-colors">Services</a>
+                <a href="#portfolio" class="text-gray-400 hover:text-[#00ffa3] transition-colors">Portfolio</a>
+                <a href="#pricing" class="text-gray-400 hover:text-[#00ffa3] transition-colors">Pricing</a>
+                <a href="https://wa.me/26776148154" class="btn-modern btn-primary py-2 px-5 text-sm">Start a Project</a>
+            </div>
+
+            <button class="md:hidden text-2xl text-white" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+        <div class="mesh-bg"></div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-[#00ffa3] mb-8 uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-[#00ffa3] animate-pulse"></span>
+                    <span>Global Digital Agency</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold font-heading mb-8 leading-[1.1]">
+                    Mint Digital Marketing is a <span class="accent-text">Global Agency</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-gray-400 mb-12 leading-relaxed max-w-xl">
+                    We provide premium social media management and high-performance website development designed to increase leads, maximize customer acquisition, and scale your business presence globally.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/26776148154?text=I'm%20interested%20in%20scaling%20my%20business" class="btn-modern btn-primary text-center">
+                        Work With Us
+                    </a>
+                    <a href="#portfolio" class="btn-modern btn-secondary text-center">
+                        View Portfolio
+                    </a>
+                </div>
+                <div class="mt-12 flex items-center space-x-4">
+                    <p class="text-sm font-bold uppercase tracking-widest text-gray-500">We build websites that turn visitors into paying customers</p>
+                </div>
+            </div>
+            <div class="relative hidden lg:block" data-aos="fade-left" data-aos-duration="1200">
+                <div class="relative z-10">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426" alt="Agency Work" class="rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#00ffa3]/20 blur-[80px] rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold font-heading mb-6">Our Core <span class="accent-text">Expertise</span></h2>
+                <p class="text-gray-400 max-w-2xl">From global social strategies to conversion-first development.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="portfolio-card p-8" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-[#00ffa3]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-share-nodes text-[#00ffa3] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Social Media Management</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Strategic content creation and community management that builds authority and drives organic growth across all platforms.</p>
+                </div>
+                <div class="portfolio-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-[#00ffa3]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-code text-[#00ffa3] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Website Development</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">High-performance, mobile-optimized websites built with the latest technologies to ensure speed, security, and conversion.</p>
+                </div>
+                <div class="portfolio-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-[#00ffa3]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-bullseye text-[#00ffa3] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Lead Generation Systems</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Custom-built sales funnels and automated systems that turn cold traffic into high-intent leads for your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold font-heading mb-6">The <span class="accent-text">Portfolio</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Real businesses. Real transformations. Real results.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="portfolio-card" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" alt="Northbridge Medical" class="portfolio-image">
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00ffa3] mb-3">Healthcare</div>
+                        <h3 class="text-xl font-bold mb-3">Northbridge Medical Center</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Implemented a patient-centric digital portal and automated booking system, resulting in a 40% increase in recurring appointments.</p>
+                        <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-xs font-bold text-gray-500 uppercase">Outcome: +48% Bookings</span>
+                            <a href="https://wa.me/26776148154" class="text-[#00ffa3] text-sm font-bold hover:underline">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800" alt="Apex Realty" class="portfolio-image">
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00ffa3] mb-3">Real Estate</div>
+                        <h3 class="text-xl font-bold mb-3">Apex Realty Group</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Developed a high-end property listing engine with integrated lead scoring, tripling the quality of inbound inquiries for luxury listings.</p>
+                        <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-xs font-bold text-gray-500 uppercase">Outcome: 3x Lead Quality</span>
+                            <a href="https://wa.me/26776148154" class="text-[#00ffa3] text-sm font-bold hover:underline">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800" alt="Velocity Fitness" class="portfolio-image">
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00ffa3] mb-3">Lifestyle</div>
+                        <h3 class="text-xl font-bold mb-3">Velocity Fitness Club</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Built a membership acquisition funnel and automated onboarding process that secured 120+ new members in the first month.</p>
+                        <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-xs font-bold text-gray-500 uppercase">Outcome: +55% Signups</span>
+                            <a href="https://wa.me/26776148154" class="text-[#00ffa3] text-sm font-bold hover:underline">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=800" alt="ClearPath Legal" class="portfolio-image">
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00ffa3] mb-3">Legal</div>
+                        <h3 class="text-xl font-bold mb-3">ClearPath Legal Services</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Authority-building platform designed to route complex legal inquiries to specialized departments with zero friction.</p>
+                        <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-xs font-bold text-gray-500 uppercase">Outcome: +50% Consultation Rate</span>
+                            <a href="https://wa.me/26776148154" class="text-[#00ffa3] text-sm font-bold hover:underline">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" alt="Horizon Dental" class="portfolio-image">
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00ffa3] mb-3">Medical</div>
+                        <h3 class="text-xl font-bold mb-3">Horizon Dental Studio</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Modern clinic website with localized landing pages that achieved #1 ranking on Google for key local search terms.</p>
+                        <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-xs font-bold text-gray-500 uppercase">Outcome: #1 Google Ranking</span>
+                            <a href="https://wa.me/26776148154" class="text-[#00ffa3] text-sm font-bold hover:underline">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="ePick" class="portfolio-image">
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00ffa3] mb-3">Fintech</div>
+                        <h3 class="text-xl font-bold mb-3">ePick Online Platform</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">A full-scale digital ecosystem overhaul that improved conversion rates by 62% and revenue by 3.4x within six months.</p>
+                        <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-xs font-bold text-gray-500 uppercase">Outcome: 3.4x Revenue</span>
+                            <a href="https://wa.me/26776148154" class="text-[#00ffa3] text-sm font-bold hover:underline">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-padding bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold font-heading mb-6">Investment <span class="accent-text">Tiers</span></h2>
+                <p class="text-gray-400">Transparent, value-based pricing for businesses at every scale.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter -->
+                <div class="portfolio-card p-10" data-aos="fade-up">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-2">Starter</h3>
+                        <div class="text-3xl font-extrabold mb-4">$250</div>
+                        <p class="text-gray-500 text-xs">Essential digital presence for emerging brands.</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow text-sm text-gray-400">
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>High-Converting Landing Page</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>Social Media Setup</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>WhatsApp Integration</span></li>
+                    </ul>
+                    <a href="https://wa.me/26776148154?text=Interested%20in%20Starter%20Package" class="btn-modern btn-secondary w-full">Choose Starter</a>
+                </div>
+
+                <!-- Growth -->
+                <div class="portfolio-card p-10 border-[#00ffa3]/30 bg-[#00ffa3]/[0.02]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-2">Growth</h3>
+                        <div class="text-3xl font-extrabold mb-4">$800–$1,500</div>
+                        <p class="text-gray-500 text-xs">The ultimate system for scaling your business.</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow text-sm text-gray-400">
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>Multi-Page Authority Site</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>Social Media Management</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>Lead Gen Funnels</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>SEO Strategy</span></li>
+                    </ul>
+                    <a href="https://wa.me/26776148154?text=Interested%20in%20Growth%20Package" class="btn-modern btn-primary w-full">Choose Growth</a>
+                </div>
+
+                <!-- Premium -->
+                <div class="portfolio-card p-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-2">Premium</h3>
+                        <div class="text-3xl font-extrabold mb-4">$1,500–$3,000</div>
+                        <p class="text-gray-500 text-xs">Complete digital dominance for market leaders.</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow text-sm text-gray-400">
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>Custom Enterprise Solution</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>Full Brand Transformation</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-[#00ffa3]"></i><span>24/7 Priority Support</span></li>
+                    </ul>
+                    <a href="https://wa.me/26776148154?text=Interested%20in%20Premium%20Package" class="btn-modern btn-secondary w-full">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Reach Section -->
+    <section class="section-padding border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-8">Operating Worldwide</h2>
+            <p class="text-gray-400 text-lg leading-relaxed mb-12">
+                Mint Digital Marketing is a global agency with infrastructure designed to serve international clients across all time zones. Whether you are in <span class="text-white font-bold">London, Johannesburg, Tokyo</span>, or anywhere else in the world, we operate globally to deliver world-class digital systems to your business.
+            </p>
+            <div class="flex justify-center space-x-12 opacity-30 grayscale">
+                <i class="fa-solid fa-earth-americas text-4xl"></i>
+                <i class="fa-solid fa-earth-europe text-4xl"></i>
+                <i class="fa-solid fa-earth-africa text-4xl"></i>
+                <i class="fa-solid fa-earth-asia text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-3">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663339982393/JxOloJlwJIMvtdXl.png" alt="Mint Digital Marketing Logo" class="footer-logo">
+            </div>
+            
+            <div class="flex space-x-6 text-xs font-bold uppercase tracking-widest text-gray-500">
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-xs text-gray-600 mb-2">&copy; 2026 Mint Digital Marketing. All rights reserved.</p>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Powered by Mint Digital Marketing</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            offset: 100
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        menuBtn.addEventListener('click', () => {
+            alert('Mobile navigation menu would open here. All sections are accessible via scrolling.');
+        });
+    </script>
 </body>
 </html>
