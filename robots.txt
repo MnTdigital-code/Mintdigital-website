@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mntdigital-code.github.io/Mintdigital-website/sitemap.xml
