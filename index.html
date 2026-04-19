@@ -3,156 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mint Digital Marketing | Global Digital Strategy & Development Agency</title>
+
+    <!-- SEO META -->
+    <meta name="description" content="Mint Digital Marketing is a global agency specializing in high-converting websites, social media management, and lead generation systems that scale businesses worldwide.">
+    <meta name="keywords" content="digital marketing, website development, SEO agency, social media marketing, lead generation systems, Mint Digital Marketing">
+    <meta name="author" content="Mint Digital Marketing">
+
+    <!-- CANONICAL (FIXED TO YOUR LIVE URL) -->
+    <link rel="canonical" href="https://mntdigital-code.github.io/Mintdigital-website/">
+
+    <!-- MOBILE THEME COLOR -->
+    <meta name="theme-color" content="#00ffa3">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663339982393/JxOloJlwJIMvtdXl.png">
+
+    <!-- OPEN GRAPH (SOCIAL + SEARCH PREVIEWS) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mint Digital Marketing | Global Digital Agency">
+    <meta property="og:description" content="We build high-converting websites, automation systems, and digital strategies that scale businesses globally.">
+    <meta property="og:url" content="https://mntdigital-code.github.io/Mintdigital-website/">
+    <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663339982393/JxOloJlwJIMvtdXl.png">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mint Digital Marketing">
+    <meta name="twitter:description" content="High-performance digital systems for business growth.">
+    <meta name="twitter:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663339982393/JxOloJlwJIMvtdXl.png">
+
+    <!-- STRUCTURED DATA: ORGANIZATION -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mint Digital Marketing",
+        "url": "https://mntdigital-code.github.io/Mintdigital-website/",
+        "logo": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339982393/JxOloJlwJIMvtdXl.png",
+        "sameAs": [
+            "https://wa.me/26776148154"
+        ]
+    }
+    </script>
+
+    <!-- STRUCTURED DATA: WEBSITE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mint Digital Marketing",
+        "url": "https://mntdigital-code.github.io/Mintdigital-website/"
+    }
+    </script>
+
+    <!-- LIBRARIES (UNCHANGED) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #00ffa3;
-            --primary-dark: #00d1ff;
-            --bg-dark: #080808;
-            --card-bg: #121212;
-            --border: rgba(255, 255, 255, 0.08);
-        }
-        
-        body {
-            background-color: var(--bg-dark);
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, .font-heading {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            letter-spacing: -0.02em;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 640px) {
-            h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
-            h2 { font-size: 2rem !important; }
-            .section-padding { padding-top: 4rem; padding-bottom: 4rem; }
-        }
-
-        .section-padding { padding-top: 6rem; padding-bottom: 6rem; }
-
-        /* Premium Buttons */
-        .btn-modern {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2rem;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-            border: 1px solid transparent;
-            cursor: pointer;
-            text-decoration: none !important;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #000;
-            box-shadow: 0 4px 15px rgba(0, 255, 163, 0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 255, 163, 0.4);
-            filter: brightness(1.1);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.03);
-            color: #fff;
-            border-color: var(--border);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Portfolio Cards */
-        .portfolio-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 1.5rem;
-            transition: all 0.4s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .portfolio-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .portfolio-image {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* Glassmorphism */
-        .glass {
-            background: rgba(10, 10, 10, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* Animations */
-        .accent-text {
-            color: var(--primary);
-        }
-
-        .mesh-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 163, 0.05) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-dark); }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
-
-        /* Logo Styling */
-        .site-logo {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
-        
-        .footer-logo {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
-        }
-    </style>
-</head>
 <body>
 
     <!-- Navigation -->
